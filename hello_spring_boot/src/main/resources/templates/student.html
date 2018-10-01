@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Student Profile</title>
+    <link rel="stylesheet" th:href="@{bootstrap.css}" href="../static/bootstrap.css"/>
+</head>
+<body>
+<h1>Student Profile</h1>
+<table class="table table bordered table-hover">
+    <tr>
+        <th>Student Id: </th>
+        <th>Student Name: </th>
+        <th>Cgpa: </th>
+    </tr>
+    <tr>
+        <td th:text="${student.studentId}">4</td>
+        <td th:text="${student.studentName}">Anjuman Mufidul</td>
+        <td th:text="${student.cgpa}">4.00</td>
+    </tr>
+</table>
+</body>
+</html>
