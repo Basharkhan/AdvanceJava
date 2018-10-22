@@ -3,10 +3,10 @@ package bd.ac.seu.hello_spring_boot.controller;
 import bd.ac.seu.hello_spring_boot.model.Student;
 import bd.ac.seu.hello_spring_boot.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Controller;
+//import org.springframework.security.core.Authentication;
+//import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,11 +19,11 @@ public class ApiController {
     StudentRepository studentRepository;
 
     @RequestMapping("/students")
-    public List<Student> getStudentList(Authentication authentication) {
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        System.out.println(userDetails.getUsername());
-        System.out.println(userDetails.getPassword());
-        authentication.getAuthorities().forEach(System.out::println);
+    public List<Student> getStudentList() {
+//        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+//        System.out.println(userDetails.getUsername());
+//        System.out.println(userDetails.getPassword());
+//        authentication.getAuthorities().forEach(System.out::println);
 
         return studentRepository.findAll();
     }
